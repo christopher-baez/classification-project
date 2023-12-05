@@ -10,7 +10,7 @@ def prep_telco(df):
         -customer id
     turns total charges into a float by deleting empty spaces
     """
-    df = df.drop(columns=['payment_type_id', 'internet_service_type_id', 'contract_type_id', 'customer_id', 'paperless_billing'])
+    df = df.drop(columns=['payment_type_id', 'internet_service_type_id', 'contract_type_id','Unnamed: 0', 'paperless_billing'])
 
     df = df[df.total_charges != ' ']
 
